@@ -4,11 +4,24 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
+    public static void main(String[] args) {
+        //bài 1:
+        printSquare();
+        printTriangle();
+        //bài 2:
+        countWords();
+        //bài 3:
+        checkPrimeNumber();
+        //bài 4:
+        tenPrimeNums();
+        primeNumTen();
+        //bài 5:
+        sumMatrix();
+        //bài 6:
+        inputInfo();
+    }
     public static Scanner sc = new Scanner(System.in);
-    public static final char SPACE = ' ';
-    public static final char TAB = '\t';
-    public static final char BREAK_LINE = '\n';
-    public static void printSquare() {
+    public static void printSquareAndTriangle() {
         System.out.println("Câu 1: Viết chương trình thực hiện");
         System.out.println("In ra màn hình hình vuông *");
         for (int i = 0; i < 4; i++) {
@@ -17,9 +30,6 @@ public class Main {
             }
             System.out.println("\n");
         }
-    }
-
-    public static void printTriangle() {
         System.out.println("In ra màn hình hình tam giác *");
         for (int i = 4; i >0 ; i--) {
             for (int j = 4; j > i-1; j--) {
@@ -29,15 +39,14 @@ public class Main {
         }
         System.out.println("\n-----------------------------");
     }
-
     public static void countWords() {
         System.out.println("Câu 2: chuỗi: \"You only live once, but if you do it right, once is enough\"");
         String str = "You only live once, but if you do it right, once is enough";
         int count = 0;
         boolean notCounted = true;
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) != SPACE && str.charAt(i) != TAB
-                    && str.charAt(i) != BREAK_LINE) {
+            if (str.charAt(i) != ' ' && str.charAt(i) != '\t'
+                    && str.charAt(i) != '\n') {
                 if(notCounted) {
                     count++;
                     notCounted = false;
@@ -71,8 +80,6 @@ public class Main {
     public static void checkPrimeNumber() {
         System.out.println("Câu 3: Viết chương trình sinh ra số ngẫu nhiên, kiểm tra số đó có là số nguyên tố không.");
         final int MAX_VALUE = 100;
-//        Random rd = new Random();
-
         double randomDouble = Math.random();
         randomDouble = randomDouble * 100 + 1;
         int randomInt = (int) randomDouble;
@@ -83,7 +90,6 @@ public class Main {
         }
         System.out.println("\n-----------------------------");
     }
-
     public static void tenPrimeNums() {
         System.out.println("Câu 4: Viết chương trình thực hiện:");
         System.out.println("Liệt kê 10 số nguyên tố đầu tiên");
@@ -98,7 +104,6 @@ public class Main {
         }
         System.out.println("\n-----------------------------");
     }
-
     public static void primeNumTen() {
         System.out.println("Liệt kê các số nguyên tố nhỏ hơn 10");
         System.out.println("Các số nguyên tố nhỏ hơn 10 là: ");
@@ -109,7 +114,6 @@ public class Main {
         }
         System.out.println("\n-----------------------------");
     }
-
     public static void sum2Darray() {
         int sum = 0;
         System.out.println("Nhập vào số dòng: ");
@@ -233,7 +237,6 @@ public class Main {
         Matcher matcher = VALID_PHONE_NUMBER_REGEX.matcher(phoneStr);
         return matcher.find();
     }
-
     public static void inputInfo() {
         System.out.println("Viết chương trình nhập vào từ bàn phím email và số điện thoại, kiểm tra email và số điện thoại đó có hợp lệ không.");
         System.out.println("Nhập email: ");
@@ -251,14 +254,5 @@ public class Main {
         }
         System.out.println("Số điện thoại vừa nhập là :"+phoneNumber);
     }
-    public static void main(String[] args) {
-        printSquare();
-        printTriangle();
-        countWords();
-        checkPrimeNumber();
-        tenPrimeNums();
-        primeNumTen();
-        sumMatrix();
-        inputInfo();
-    }
+
 }
