@@ -6,8 +6,7 @@ import java.util.regex.Pattern;
 public class Main {
     public static void main(String[] args) {
         //bài 1:
-        printSquare();
-        printTriangle();
+        printSquareAndTriangle();;
         //bài 2:
         countWords();
         //bài 3:
