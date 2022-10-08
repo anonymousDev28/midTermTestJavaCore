@@ -4,31 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
-    public static final char SPACE = ' ';
-    public static final char TAB = '\t';
-    public static final char BREAK_LINE = '\n';
-    public static void printSquare() {
-        System.out.println("Câu 1: Viết chương trình thực hiện");
-        System.out.println("In ra màn hình hình vuông *");
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                System.out.print("*\t");
-            }
-            System.out.println("\n");
-        }
-    }
-
-    public static void printTriangle() {
-        System.out.println("In ra màn hình hình tam giác *");
-        for (int i = 4; i >0 ; i--) {
-            for (int j = 4; j > i-1; j--) {
-                System.out.print("*\t");
-            }
-            System.out.println("\n");
-        }
-        System.out.println("\n-----------------------------");
-    }
-
+    public static Scanner sc = new Scanner(System.in);
     public static void countWords() {
         System.out.println("Câu 2: chuỗi: \"You only live once, but if you do it right, once is enough\"");
         String str = "You only live once, but if you do it right, once is enough";
@@ -108,7 +84,6 @@ public class Main {
         }
         System.out.println("\n-----------------------------");
     }
-    public static Scanner sc = new Scanner(System.in);
     public static void sum2Darray() {
         int sum = 0;
         System.out.println("Nhập vào số dòng: ");
